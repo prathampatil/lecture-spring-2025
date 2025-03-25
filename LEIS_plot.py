@@ -1,9 +1,6 @@
 
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 import urllib.request
-import scipy
 from scipy import signal
 
 x_data = []
