@@ -2,13 +2,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.decomposition import PCA
-import tkinter as tk
-from tkinter import filedialog
-import os
 import urllib.request
 import scipy
-
 from scipy import signal
 
 x_data = []
@@ -16,6 +11,8 @@ y_data = []
 
 
 dclean = 0.    #dclean can be 0 or 1 depending upon if the data needs to be cleaned for noise
+
+#Import the data file from the source and extract X and Y from the data
 url = "https://raw.githubusercontent.com/prathampatil/lecture-spring-2025/main/data.txt"
 response = urllib.request.urlopen(url)
 lines = response.read().decode('utf-8').splitlines()
@@ -25,25 +22,13 @@ for line in lines:
     y_data.append(y)
 
 
-
-# In[87]:
-
-
-X= x_data
-Y= y_data
-
-
-# In[88]:
-
+X = x_data
+Y = y_data
 
 if dclean == 1:
-    Y = signal.savgol_filter(Y, 51, 3) # window size 51, polynomial order 3
+    Y = signal.savgol_filter(Y, 51, 3) # window size 51, polynomial order 3 Savitzky-Golay Smoothening
     
-
-
-# In[89]:
-
-
+#plot the data
 plt.plot(X,Y,'r')
 plt.title("LEIS Plot")
 plt.xlabel("Energy (eV)")
@@ -52,14 +37,4 @@ plt.tight_layout()
 plt.show()
 
 print("Plotting Successful")
-
-
-
-
-
-
-# In[ ]:
-
-
-
 

@@ -1,0 +1,7 @@
+Package requirements to run this program on Python3
+
+matplotlib
+numpy
+pandas
+scipy
+urllib.request
