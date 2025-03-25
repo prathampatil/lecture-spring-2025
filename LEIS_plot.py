@@ -11,20 +11,26 @@ import scipy
 
 from scipy import signal
 
-
+x_data = []
+y_data = []
 
 
 dclean = 0.    #dclean can be 0 or 1 depending upon if the data needs to be cleaned for noise
 url = "https://raw.githubusercontent.com/prathampatil/lecture-spring-2025/main/data.txt"
-file_path = urllib.request.urlopen(url)
-data = pd.read_csv(file_path, sep='\s+', skiprows=4, header=None, names=['X','Y'])
+response = urllib.request.urlopen(url)
+lines = response.read().decode('utf-8').splitlines()
+for line in lines:
+    x, y = map(float, line.strip().split())
+    x_data.append(x)
+    y_data.append(y)
+
 
 
 # In[87]:
 
 
-X=data['X']
-Y=data['Y']
+X= x_data
+Y= y_data
 
 
 # In[88]:
@@ -39,20 +45,15 @@ if dclean == 1:
 
 
 plt.plot(X,Y,'r')
-plt.title(str(name))
+plt.title("LEIS Plot")
 plt.xlabel("Energy (eV)")
 plt.ylabel("Intensity")
 plt.tight_layout()
-
-#plt.plot(X,Yhat_MXene,'b')
-
-
-# In[90]:
+plt.show()
 
 
-pltname = str(name) + '.png'
-plt.savefig(os.path.join(dir_path, pltname))        
-plt.close('all')
+
+
 
 
 # In[ ]:
