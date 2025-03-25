@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[83]:
-
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,34 +6,17 @@ from sklearn.decomposition import PCA
 import tkinter as tk
 from tkinter import filedialog
 import os
-
+import urllib.request
 import scipy
 
 from scipy import signal
-get_ipython().run_line_magic('matplotlib', 'qt')
 
 
-# In[84]:
-
-
-# Get .txt file
-
-root = tk.Tk()
-root.withdraw()
-file_path = filedialog.askopenfilename(filetypes=[("Two Column txt","*.txt"),("Any text file","*.*")])
-name = os.path.basename(file_path)
-dir_path = os.path.dirname(os.path.realpath(file_path))
-# Read the data
-
-
-# In[85]:
 
 
 dclean = 0.    #dclean can be 0 or 1 depending upon if the data needs to be cleaned for noise
-
-# In[86]:
-
-
+url = "https://raw.githubusercontent.com/prathampatil/lecture-spring-2025/main/data.txt"
+file_path = urllib.request.urlopen(url)
 data = pd.read_csv(file_path, sep='\s+', skiprows=4, header=None, names=['X','Y'])
 
 
