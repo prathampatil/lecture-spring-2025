@@ -51,6 +51,8 @@ plt.ylabel("Intensity")
 plt.tight_layout()
 plt.show()
 
+print("Plotting Successful")
+
 
 
 
