@@ -34,8 +34,7 @@ dir_path = os.path.dirname(os.path.realpath(file_path))
 # In[85]:
 
 
-dclean = 0
-
+dclean = 0.    #dclean can be 0 or 1 depending upon if the data needs to be cleaned for noise
 
 # In[86]:
 
