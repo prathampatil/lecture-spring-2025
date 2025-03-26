@@ -1,6 +1,5 @@
 import unittest
-from unittest.mock import patch, mock_open
-import urllib.request
+from unittest.mock import patch
 
 # Assuming the LEIS_plot.py script is in the same directory or adjust the import accordingly
 import LEIS_plot
