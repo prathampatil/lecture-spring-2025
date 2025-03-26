@@ -1,14 +1,12 @@
 # Lecture Spring 2025
 
 ![Build Status](https://github.com/prathampatil/lecture-spring-2025/actions/workflows/ci.yml/badge.svg)
-![Coverage Status](https://coveralls.io/repos/github/prathampatil/lecture-spring-2025/badge.svg?branch=main)
-![Python Version](https://img.shields.io/pypi/pyversions/demo-lecture.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-![CodeCov](https://img.shields.io/badge/codecov-%23ff0077.svg?style=for-the-badge&logo=codecov&logoColor=white)
+
 
 ## Description
 This repository contains a code to plot the XY data from the file ```data.txt``` contained in the repository itself. ```data.txt``` is a file containing XY data of the spectroscopic measurements from the Low Energy Ion Scattering Spectroscopy(LEIS). 
